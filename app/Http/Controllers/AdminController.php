@@ -9,4 +9,7 @@ class AdminController extends Controller
     public function index(){
         return view('backend.dashboard');
     }
+    public function createshow(){
+        return view('backend.employee.createshow');
+    }
 }
