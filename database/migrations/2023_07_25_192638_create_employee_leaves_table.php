@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('employee_leaves', function (Blueprint $table) {
             $table->id();
             $table->foreignId('employee_id');
-            $table->foreignId('leave_type');
+            $table->string('leave_type');
             $table->string('reason')->nullable();
             $table->string('start_date');
-            $table->string('file');
+            $table->string('file')->nullable();
             $table->string('end_date')->nullable();
             $table->string('duration')->nullable();
-            
+
             $table->timestamps();
         });
     }

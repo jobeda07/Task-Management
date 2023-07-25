@@ -26,7 +26,7 @@ Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard')->
 Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow')->middleware('admin');
 
 
-
-Route::get('/employee/create',[Employee::class,'employee_create'])->name('employee.create');
-Route::post('/employee/post',[Employee::class,'employee_create_post'])->name('employee.create.post');
-Route::get('/employee/list',[Employee::class,'employee_list'])->name('employee.list');
+Route::get('/employee/create',[AdminController::class,'employee_create'])->name('employee.create');
+Route::post('/employee/post',[AdminController::class,'employee_create_post'])->name('employee.create.post');
+Route::get('/employee/list',[AdminController::class,'employee_list'])->name('employee.list');
+Route::post('/employee/leave/create',[AdminController::class,'employee_leave'])->name('employee.leave.post');
