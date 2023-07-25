@@ -22,5 +22,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard')->middleware('admin');
-Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow')->middleware('admin');
+
+Route::group(['middleware'=>'admin'],function(){
+    Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow');
+});
+
