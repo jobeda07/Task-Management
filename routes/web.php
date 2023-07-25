@@ -22,11 +22,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard')->middleware('admin');
-Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow')->middleware('admin');
 
+Route::post('/employee/leave/create', [AdminController::class, 'employee_leave'])->name('employee.leave.post');
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow');
 
-Route::get('/employee/create',[AdminController::class,'employee_create'])->name('employee.create');
-Route::post('/employee/post',[AdminController::class,'employee_create_post'])->name('employee.create.post');
-Route::get('/employee/list',[AdminController::class,'employee_list'])->name('employee.list');
-Route::post('/employee/leave/create',[AdminController::class,'employee_leave'])->name('employee.leave.post');
+    Route::get('/employee/create', [AdminController::class, 'employee_create'])->name('employee.create');
+    Route::post('/employee/post', [AdminController::class, 'employee_create_post'])->name('employee.create.post');
+    Route::get('/employee/list', [AdminController::class, 'employee_list'])->name('employee.list');
+});
