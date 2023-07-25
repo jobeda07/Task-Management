@@ -42,11 +42,11 @@
 <body>
 
     <!-- ======= Header ======= -->
-    @include('backend\header')
+    @include('backend.header')
     <!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
-    @include('backend\sidebar')
+    @include('backend.sidebar')
     <!-- End Sidebar-->
 
     <main id="main" class="main">
@@ -440,12 +440,9 @@
                         </div><!-- End Top Selling -->
 
                     </div>
-                </div><!-- End Left side columns -->
-
-                <!-- Right side columns -->
+                </div>
                 <div class="col-lg-4">
 
-                    <!-- Recent Activity -->
                     <div class="card">
                         <div class="filter">
                             <a class="icon" href="#" data-bs-toggle="dropdown"><i
@@ -473,15 +470,14 @@
                                         Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo
                                             officiis</a> beatae
                                     </div>
-                                </div><!-- End activity item-->
-
+                                </div>
                                 <div class="activity-item d-flex">
                                     <div class="activite-label">56 min</div>
                                     <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
                                     <div class="activity-content">
                                         Voluptatem blanditiis blanditiis eveniet
                                     </div>
-                                </div><!-- End activity item-->
+                                </div>
 
                                 <div class="activity-item d-flex">
                                     <div class="activite-label">2 hrs</div>
@@ -489,7 +485,7 @@
                                     <div class="activity-content">
                                         Voluptates corrupti molestias voluptatem
                                     </div>
-                                </div><!-- End activity item-->
+                                </div>
 
                                 <div class="activity-item d-flex">
                                     <div class="activite-label">1 day</div>
@@ -498,7 +494,7 @@
                                         Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati
                                             voluptatem</a> tempore
                                     </div>
-                                </div><!-- End activity item-->
+                                </div>
 
                                 <div class="activity-item d-flex">
                                     <div class="activite-label">2 days</div>
@@ -506,7 +502,7 @@
                                     <div class="activity-content">
                                         Est sit eum reiciendis exercitationem
                                     </div>
-                                </div><!-- End activity item-->
+                                </div>
 
                                 <div class="activity-item d-flex">
                                     <div class="activite-label">4 weeks</div>
@@ -514,14 +510,11 @@
                                     <div class="activity-content">
                                         Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
                                     </div>
-                                </div><!-- End activity item-->
-
+                                </div>
                             </div>
 
                         </div>
-                    </div><!-- End Recent Activity -->
-
-                    <!-- Budget Report -->
+                    </div>
                     <div class="card">
                         <div class="filter">
                             <a class="icon" href="#" data-bs-toggle="dropdown"><i
@@ -594,9 +587,7 @@
                             </script>
 
                         </div>
-                    </div><!-- End Budget Report -->
-
-                    <!-- Website Traffic -->
+                    </div>
                     <div class="card">
                         <div class="filter">
                             <a class="icon" href="#" data-bs-toggle="dropdown"><i
@@ -673,9 +664,7 @@
                             </script>
 
                         </div>
-                    </div><!-- End Website Traffic -->
-
-                    <!-- News & Updates Traffic -->
+                    </div>
                     <div class="card">
                         <div class="filter">
                             <a class="icon" href="#" data-bs-toggle="dropdown"><i
@@ -729,20 +718,19 @@
                                         eius...</p>
                                 </div>
 
-                            </div><!-- End sidebar recent posts-->
-
+                            </div>
                         </div>
-                    </div><!-- End News & Updates -->
+                    </div>
 
-                </div><!-- End Right side columns -->
+                </div>
 
             </div>
         </section>
 
-    </main> --}}
+    </main>
 
     <!-- ======= Footer ======= -->
-    @include('backend\footer')
+    @include('backend.footer')
     <!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i

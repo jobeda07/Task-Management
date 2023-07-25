@@ -28,3 +28,6 @@ Route::group(['middleware'=>'admin'],function(){
     Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow');
 });
 
+Route::get('/employee/create',[Employee::class,'employee_create'])->name('employee.create');
+Route::post('/employee/post',[Employee::class,'employee_create_post'])->name('employee.create.post');
+Route::get('/employee/list',[Employee::class,'employee_list'])->name('employee.list');
