@@ -13,10 +13,7 @@ class AdminController extends Controller
     {
         return view('backend.dashboard');
     }
-    public function createshowfront()
-    {
-        return view('layouts.createshow');
-    }
+ 
     public function createshow()
     {
         $leave=EmployeeLeave::all();
@@ -54,21 +51,5 @@ class AdminController extends Controller
         $leave = User::where('role', '0');
         return view('backend.employee.employeeList',compact('leave'));
     }
-    public function employee_leave(Request $request)
-    {
-        $request->validate([
-
-            'leave_type' => 'required',
-            'start_date' => 'required',
-        ]);
-        EmployeeLeave::create([
-            'employee_id' => Auth::user()->id,
-            'leave_type' => $request->leave_type,
-            'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
-            'reason' => $request->reason,
-
-        ]);
-        return back();
-    }
+  
 }

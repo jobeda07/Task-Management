@@ -24,7 +24,7 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::post('/employee/leave/create', [AdminController::class, 'employee_leave'])->name('employee.leave.post');
+Route::post('/employee/leave/create', [HomeController::class, 'employee_leave'])->name('employee.leave.post');
 Route::get('/employee/createShow', [AdminController::class, 'createshowfront'])->name('employee.createshow.employee');
 
 Route::group(['middleware' => 'admin'], function () {
