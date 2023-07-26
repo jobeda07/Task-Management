@@ -10,24 +10,7 @@
                 <div class="col-2">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+Apply Leave</button>
                 </div>
-                <!DOCTYPE html>
-                <html>
-
-                <style>
-                    .input-field {
-                        display: none;
-                    }
-                </style>
-
-
-
-
-
-
-
             </div>
-            <div></div>
-            <div></div>
         </div>
     </div>
 
@@ -90,7 +73,7 @@
                             <div class="row" style="margin-top: 20px;">
                                 <div class="col-8"></div>
                                 <div class="col-4">
-                                    <button type="submit"  class="btn btn-primary">Assign Leave</button>
+                                    <button type="submit" class="btn btn-primary">Assign Leave</button>
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
                                 </div>
@@ -100,7 +83,7 @@
             </div>
         </div>
     </div>
-    </div>
+    
 </main>
 
 
