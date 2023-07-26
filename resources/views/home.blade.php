@@ -43,11 +43,11 @@
 <body>
 
     <!-- ======= Header ======= -->
-    @include('layouts\header')
+    @include('layouts.header')
     <!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
-    @include('layouts\sidebar')
+    @include('layouts.sidebar')
     <!-- End Sidebar-->
 
     <main id="main" class="main">
@@ -55,7 +55,7 @@
     </main>
 
     <!-- ======= Footer ======= -->
-    @include('layouts\footer')
+    @include('layouts.footer')
     <!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
