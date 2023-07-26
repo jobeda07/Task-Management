@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
@@ -23,11 +24,14 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::group(['middleware'=>'admin'],function(){
+Route::post('/employee/leave/create', [AdminController::class, 'employee_leave'])->name('employee.leave.post');
+Route::get('/employee/createShow', [AdminController::class, 'createshowfront'])->name('employee.createshow.employee');
+
+Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');
     Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow');
-});
 
-Route::get('/employee/create',[Employee::class,'employee_create'])->name('employee.create');
-Route::post('/employee/post',[Employee::class,'employee_create_post'])->name('employee.create.post');
-Route::get('/employee/list',[Employee::class,'employee_list'])->name('employee.list');
+    Route::get('/employee/create', [AdminController::class, 'employee_create'])->name('employee.create');
+    Route::post('/employee/post', [AdminController::class, 'employee_create_post'])->name('employee.create.post');
+    Route::get('/employee/list', [AdminController::class, 'employee_list'])->name('employee.list');
+});

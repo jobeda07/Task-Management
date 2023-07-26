@@ -1,4 +1,4 @@
-@extends('backend.dashboard')
+@extends('home')
 @section('dashboardcontent')
 <main>
     <div class="card">
@@ -87,7 +87,6 @@
 </main>
 
 
-@endsection
 <script>
     function toggleInputFields(selectedRadio) {
         const inputField1 = document.getElementById('inputField1');
@@ -102,7 +101,4 @@
         }
     }
 </script>
-</script>
-</body>
-
-</html>
+@endsection
