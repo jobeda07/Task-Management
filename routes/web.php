@@ -23,6 +23,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/page', [HomeController::class, 'page'])->name('page');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::post('/employee/leave/create', [AdminController::class, 'employee_leave'])->name('employee.leave.post');
 Route::get('/employee/createShow', [AdminController::class, 'createshowfront'])->name('employee.createshow.employee');

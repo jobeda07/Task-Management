@@ -15,7 +15,7 @@ class AdminController extends Controller
     }
     public function createshowfront()
     {
-        return view('layouts.createshow');
+        return view('employeefolder.createshow');
     }
     public function createshow()
     {

@@ -1,22 +1,22 @@
 @extends('home')
-@section('dashboardcontent')
-<main>
-    <div class="card">
+@section('homesection')
+    {{-- <div class="card">
         <div class="card-body">
             <div class="row">
                 <div class="col-10">
                     <h6>Leave</h6>
                 </div>
                 <div class="col-2">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+Apply Leave</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+Apply
+                        Leave</button>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -24,7 +24,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{route('employee.leave.post')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('employee.leave.post') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-2">
@@ -49,7 +49,8 @@
                                     <div class="row">
                                         <div class="col-2">Date</div>
                                         <div class="col-10">
-                                            <input type="date" placeholder="Start Date" class="form-control" name="start_date">
+                                            <input type="date" placeholder="Start Date" class="form-control"
+                                                name="start_date">
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +59,8 @@
                                     <div class="row">
                                         <div class="col-2">End Date</div>
                                         <div class="col-10">
-                                            <input type="date" placeholder="End Date" class="form-control" name="end_date">
+                                            <input type="date" placeholder="End Date" class="form-control"
+                                                name="end_date">
                                         </div>
                                     </div>
                                 </div>
@@ -82,23 +84,23 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-</main>
+    </div> --}}
 
 
-<script>
-    function toggleInputFields(selectedRadio) {
-        const inputField1 = document.getElementById('inputField1');
-        const inputField2 = document.getElementById('inputField2');
 
-        if (selectedRadio === 1) {
-            inputField1.style.display = 'block';
-            inputField2.style.display = 'none';
-        } else if (selectedRadio === 2) {
-            inputField1.style.display = 'block';
-            inputField2.style.display = 'block';
+
+    {{-- <script>
+        function toggleInputFields(selectedRadio) {
+            const inputField1 = document.getElementById('inputField1');
+            const inputField2 = document.getElementById('inputField2');
+
+            if (selectedRadio === 1) {
+                inputField1.style.display = 'block';
+                inputField2.style.display = 'none';
+            } else if (selectedRadio === 2) {
+                inputField1.style.display = 'block';
+                inputField2.style.display = 'block';
+            }
         }
-    }
-</script>
+    </script> --}}
 @endsection
