@@ -31,8 +31,8 @@ Route::get('/employee/createShow', [HomeController::class, 'createshowfront'])->
 Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');
     Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow');
-
-    Route::get('/employee/create', [AdminController::class, 'employee_create'])->name('employee.create');
-    Route::post('/employee/post', [AdminController::class, 'employee_create_post'])->name('employee.create.post');
     Route::get('/list', [AdminController::class, 'employee_list'])->name('list');
+    Route::get('/create', [AdminController::class, 'employee_create'])->name('create');
+    Route::get('/create./post', [AdminController::class, 'employee_create_post'])->name('create.post');
+
 });

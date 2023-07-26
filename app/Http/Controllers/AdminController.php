@@ -21,7 +21,7 @@ class AdminController extends Controller
     }
     public function employee_create()
     {
-        return view('employee');
+        return view('backend.employee.create');
     }
     public function employee_create_post(Request $request)
     {
@@ -48,8 +48,8 @@ class AdminController extends Controller
     }
     public function employee_list()
     {
-        $leave = User::where('role', '0');
-        return view('backend.employee.employeeList',compact('leave'));
+         $employee = User::where('role', '0')->get();
+        return view('backend.employee.employeeList',compact('employee'));
     }
   
 }
