@@ -13,17 +13,15 @@ class AdminController extends Controller
     {
         return view('backend.dashboard');
     }
-    public function createshowfront()
-    {
-        return view('employeefolder.createshow');
-    }
+  
     public function createshow()
     {
-        return view('backend.employee.createshow');
+        $leave=EmployeeLeave::all();
+        return view('backend.employee.createshow',compact('leave'));
     }
     public function employee_create()
     {
-        return view('employee');
+        return view('backend.employee.create');
     }
     public function employee_create_post(Request $request)
     {
@@ -50,24 +48,9 @@ class AdminController extends Controller
     }
     public function employee_list()
     {
-        $user = User::where('role', '0');
-        return view('backend.employee.createshow');
+         $employee = User::where('role', '0')->get();
+        return view('backend.employee.employeeList',compact('employee'));
     }
-    public function employee_leave(Request $request)
-    {
-        $request->validate([
-
-            'leave_type' => 'required',
-            'start_date' => 'required',
-        ]);
-        EmployeeLeave::create([
-            'employee_id' => Auth::user()->id,
-            'leave_type' => $request->leave_type,
-            'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
-            'reason' => $request->reason,
-
-        ]);
-        return back();
-    }
+    
+  
 }

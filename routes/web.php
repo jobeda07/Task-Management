@@ -24,16 +24,15 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/page', [HomeController::class, 'page'])->name('page');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
-Route::post('/employee/leave/create', [AdminController::class, 'employee_leave'])->name('employee.leave.post');
-Route::get('/employee/createShow', [AdminController::class, 'createshowfront'])->name('employee.createshow.employee');
+Route::post('/employee/leave/create', [HomeController::class, 'employee_leave'])->name('employee.leave.post');
+Route::get('/employee/createShow', [HomeController::class, 'createshowfront'])->name('employee.createshow.employee');
 
 Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');
     Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow');
+    Route::get('/list', [AdminController::class, 'employee_list'])->name('list');
+    Route::get('/create', [AdminController::class, 'employee_create'])->name('create');
+    Route::get('/create./post', [AdminController::class, 'employee_create_post'])->name('create.post');
 
-    Route::get('/employee/create', [AdminController::class, 'employee_create'])->name('employee.create');
-    Route::post('/employee/post', [AdminController::class, 'employee_create_post'])->name('employee.create.post');
-    Route::get('/employee/list', [AdminController::class, 'employee_list'])->name('employee.list');
 });
