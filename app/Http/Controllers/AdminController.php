@@ -13,6 +13,10 @@ class AdminController extends Controller
     {
         return view('backend.dashboard');
     }
+    public function createshowfront()
+    {
+        return view('layouts.createshow');
+    }
     public function createshow()
     {
         return view('backend.employee.createshow');

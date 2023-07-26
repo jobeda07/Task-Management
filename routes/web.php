@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
@@ -24,6 +25,8 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::post('/employee/leave/create', [AdminController::class, 'employee_leave'])->name('employee.leave.post');
+Route::get('/employee/createShow', [AdminController::class, 'createshowfront'])->name('employee.createshow.employee');
+
 Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');
     Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow');
