@@ -23,9 +23,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/page', [HomeController::class, 'page'])->name('page');
 
 Route::post('/employee/leave/create', [HomeController::class, 'employee_leave'])->name('employee.leave.post');
-Route::get('/employee/createShow', [AdminController::class, 'createshowfront'])->name('employee.createshow.employee');
+Route::get('/employee/createShow', [HomeController::class, 'createshowfront'])->name('employee.createshow.employee');
 
 Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');
@@ -33,5 +34,5 @@ Route::group(['middleware' => 'admin'], function () {
 
     Route::get('/employee/create', [AdminController::class, 'employee_create'])->name('employee.create');
     Route::post('/employee/post', [AdminController::class, 'employee_create_post'])->name('employee.create.post');
-    Route::get('/employee/list', [AdminController::class, 'employee_list'])->name('employee.list');
+    Route::get('/list', [AdminController::class, 'employee_list'])->name('list');
 });

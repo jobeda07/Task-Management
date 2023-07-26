@@ -1,6 +1,6 @@
 @extends('backend.dashboard')
 @section('dashboardcontent')
-<main>
+<main class="main" id="main">
     <div class="card">
         <div class="card-body" style="padding: 20px;">
             <div class="row">

@@ -9,7 +9,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="{{ route('employee.list') }}">
+            <a class="nav-link " href="{{ route('list') }}">
                 <i class="bi bi-grid"></i>
                 <span>Employee</span>
             </a>

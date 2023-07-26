@@ -1,15 +1,67 @@
 @extends('home')
-@section('dashboardcontent')
-<main>
+@section('homesection')
+<main id="main" class="main">
     <div class="card">
-        <div class="card-body">
+        <div class="card-body" style="padding: 20px;">
             <div class="row">
                 <div class="col-10">
                     <h6>Leave</h6>
                 </div>
                 <div class="col-2">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">+Apply Leave</button>
+                    <button type="button" class="btn btn-white" style="border-color: gray;" data-bs-toggle="modal" data-bs-target="#exampleModal">+Apply Leave</button>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Leave Type</th>
+                            <th>Date</th>
+                            <th>Duration</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($leave as $data)
+                        <tr>
+                            <td>{{$data->leave_type}}</td>
+                            <td>{{$data->start_date}}</td>
+                            <td>
+                                @if($data->duration==0)
+                                1 Day
+                                @else
+                                {{$data->duration}} Day
+                                @endif
+                            </td>
+                            <td>
+                                @if($data->status==0)
+                                <button class="btn btn-primary">pending</button>
+                                @elseif($data->status==1)
+                                <button class="btn btn-success">Approved</button>
+                                @elseif($data->status==2)
+                                <button class="btn btn-danger">Cancelled</button>
+
+                                @endif
+                            </td>
+                            <td>
+
+                                @if($data->status==0)
+                                <a href="" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                                @endif
+
+
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+
+                </table>
             </div>
         </div>
     </div>
@@ -83,10 +135,11 @@
             </div>
         </div>
     </div>
-    
+
 </main>
 
 
+@endsection
 <script>
     function toggleInputFields(selectedRadio) {
         const inputField1 = document.getElementById('inputField1');
@@ -101,4 +154,7 @@
         }
     }
 </script>
-@endsection
+</script>
+</body>
+
+</html>

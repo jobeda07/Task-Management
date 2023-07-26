@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,12 +31,6 @@
     <!-- Template Main CSS File -->
     <link href="backend/assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: NiceAdmin - v2.4.1
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -50,9 +43,9 @@
     @include('layouts.sidebar')
     <!-- End Sidebar-->
 
-    <main id="main" class="main">
-        @yield('dashboardcontent')
-    </main>
+    {{-- <main id="main" class="main"> --}}
+    @yield('homesection')
+    {{-- </main> --}}
 
     <!-- ======= Footer ======= -->
     @include('layouts.footer')

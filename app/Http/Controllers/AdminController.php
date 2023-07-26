@@ -13,7 +13,7 @@ class AdminController extends Controller
     {
         return view('backend.dashboard');
     }
- 
+  
     public function createshow()
     {
         $leave=EmployeeLeave::all();

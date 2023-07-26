@@ -9,11 +9,11 @@
             </a>
         </li><!-- End Dashboard Nav -->
         <li class="nav-item">
-            <a class="nav-link " href="{{route('employee.createshow.employee')}}">
+            <a class="nav-link" href="{{route('page')}}">
                 <i class="bi bi-grid"></i>
                 <span>Employee</span>
             </a>
-        </li><!-- End Dashboard Nav -->
+        </li>
 
 
 

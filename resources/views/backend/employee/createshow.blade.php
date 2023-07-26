@@ -29,7 +29,7 @@
                     <tbody>
                         @foreach($leave as $data)
                         <tr>
-                            <td>{{$data->teacher_id}}</td>
+                            <td>{{$data->employee_id}}</td>
                             <td>{{$data->leave_type}}</td>
                             <td>{{$data->start_date}}</td>
                             <td>{{$data->duration}}</td>
@@ -42,12 +42,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
 
 
     <!-- Modal -->
@@ -118,7 +112,7 @@
             </div>
         </div>
     </div>
-
+    
 </main>
 
 
