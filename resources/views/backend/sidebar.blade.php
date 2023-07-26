@@ -7,13 +7,18 @@
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
-        </li><!-- End Dashboard Nav -->
+        </li>
         <li class="nav-item">
-            <a class="nav-link " href="{{ route('employee.createshow') }}">
+            <a class="nav-link " href="{{ route('employee.list') }}">
                 <i class="bi bi-grid"></i>
                 <span>Employee</span>
             </a>
-        </li><!-- End Dashboard Nav -->
+        </li>
+            <a class="nav-link " href="{{ route('employee.createshow') }}">
+                <i class="bi bi-grid"></i>
+                <span>Employee Leave</span>
+            </a>
+        </li>
 
 
 

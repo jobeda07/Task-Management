@@ -19,7 +19,8 @@ class AdminController extends Controller
     }
     public function createshow()
     {
-        return view('backend.employee.createshow');
+        $leave=EmployeeLeave::all();
+        return view('backend.employee.createshow',compact('leave'));
     }
     public function employee_create()
     {
@@ -50,8 +51,8 @@ class AdminController extends Controller
     }
     public function employee_list()
     {
-        $user = User::where('role', '0');
-        return view('backend.employee.createshow');
+        $leave = User::where('role', '0');
+        return view('backend.employee.employeeList',compact('leave'));
     }
     public function employee_leave(Request $request)
     {
