@@ -1,18 +1,7 @@
 @extends('backend.dashboard')
 @section('dashboardcontent')
 <main>
-    <div class="card">
-        <div class="card-body" style="padding: 20px;">
-            <div class="row">
-                <div class="col-8">
-                    <h6>Leave</h6>
-                </div>
-                <div class="col-4">
-                <button type="button" class="btn btn-white"  style="border-color: gray;" data-bs-toggle="modal" data-bs-target="#exampleModal">+Apply Leave</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <div class="card">
         <div class="card-body">
             <div class="row">
@@ -21,7 +10,7 @@
                         <tr>
                             <th>Applicant</th>
                             <th>Leave Type</th>
-                            <th>Date</th>
+                            <th>StarDate</th>
                             <th>Duration</th>
                             <th>Status</th>
                         </tr>
@@ -29,7 +18,8 @@
                     <tbody>
                         @foreach($leave as $data)
                         <tr>
-                            <td>{{$data->employee_id}}</td>
+                            <td> {{App\Models\User::find($data->employee_id)?->name}}
+                            </td>
                             <td>{{$data->leave_type}}</td>
                             <td>{{$data->start_date}}</td>
                             <td>{{$data->duration}}</td>
@@ -112,7 +102,7 @@
             </div>
         </div>
     </div>
-    
+
 </main>
 
 

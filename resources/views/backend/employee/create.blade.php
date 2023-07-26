@@ -18,17 +18,19 @@
                     </div>
                 </div>
                 <div class="row">
-                <div class="col-6">
-                <label for="">email</label>
-                <input type="email" class="form-control" name="email"></div>
-                <div class="col-6">
-                <label for="">phone</label>
-                <input type="text" class="form-control" name="phone"></div>
+                    <div class="col-6">
+                        <label for="">email</label>
+                        <input type="email" class="form-control" name="email">
+                    </div>
+                    <div class="col-6">
+                        <label for="">phone</label>
+                        <input type="text" class="form-control" name="phone">
+                    </div>
                 </div>
                 <label for="">Image</label>
                 <input type="file" class="form-control" name="image">
-             <center>                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
-</center>
+                <center> <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+                </center>
             </form>
 
         </div>

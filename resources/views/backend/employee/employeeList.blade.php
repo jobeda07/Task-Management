@@ -1,10 +1,10 @@
 @extends('backend.dashboard')
 @section('dashboardcontent')
 <main>
-   
+
     <div class="card">
         <div class="card-body" style="padding: 20px;">
-        <a href="{{route('create')}}" style="float: right; border-color:blue" class="btn btn-white">+ Add New Employee</a>
+            <a href="{{route('create')}}" style="float: right; border-color:blue" class="btn btn-white">+ Add New Employee</a>
 
             <table class="table">
                 <thead>
@@ -38,15 +38,29 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                    <center>
-                        <h1 class="modal-title fs-5" style="margin-top: 2%;" id="exampleModalLabel">Leave Details</h1>
-                    </center>
+                <center>
+                    <h1 class="modal-title fs-5" style="margin-top: 2%;" id="exampleModalLabel">Leave Details</h1>
+                </center>
                 <div class="modal-body">
-                    
-                </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th>Month</th>
+                            <th>Days</th>
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>sdsdsdsd</td>
+                            <td>sdsds</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </main>
 

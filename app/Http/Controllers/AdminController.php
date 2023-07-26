@@ -51,5 +51,6 @@ class AdminController extends Controller
          $employee = User::where('role', '0')->get();
         return view('backend.employee.employeeList',compact('employee'));
     }
+    
   
 }
