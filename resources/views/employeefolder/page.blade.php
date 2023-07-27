@@ -40,11 +40,11 @@
                             </td>
                             <td>
                                 @if($data->status==0)
-                                <button class="btn btn-primary">pending</button>
+                                <button class="badge bg-primary" >pending</button>
                                 @elseif($data->status==1)
-                                <button class="btn btn-success">Approved</button>
+                                <button class="badge bg-succees" >Approved</button>
                                 @elseif($data->status==2)
-                                <button class="btn btn-danger">Cancelled</button>
+                                <button class="badge bg-danger" >Cancelled</button>
 
                                 @endif
                             </td>

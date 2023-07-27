@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index1'])->name('home');
 Route::get('/page', [HomeController::class, 'page'])->name('page');
 
 Route::post('/employee/leave/create', [HomeController::class, 'employee_leave'])->name('employee.leave.post');
@@ -33,6 +33,10 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/employee', [AdminController::class, 'createshow'])->name('employee.createshow');
     Route::get('/list', [AdminController::class, 'employee_list'])->name('list');
     Route::get('/create', [AdminController::class, 'employee_create'])->name('create');
-    Route::get('/create./post', [AdminController::class, 'employee_create_post'])->name('create.post');
+    Route::post('/create/post', [AdminController::class, 'employee_create_post'])->name('create.post');
+    Route::post('/create/edit/post/{id}', [AdminController::class, 'employee_edit_post'])->name('create.edit.post');
+    Route::get('/employee/deletes/task/{id}', [AdminController::class, 'employee_delete'])->name('employee.delete');
+
+
 
 });
